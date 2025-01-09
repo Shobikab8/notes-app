@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+body{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  
+}
+
+#inputField{
+  background-color: rgb(255, 220, 47);
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  width: 500px;
+  height: 500px; 
+  padding: 5px;
+}
+
+button{
+  cursor: pointer;
+}
+
+#container{
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px 20px;
+}
+#container:last-child{
+  margin-bottom: 20px;
+}
+
+#notes-grid{
+  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#notes-grid button{
+  margin-left: 20px;
+  padding: 4px 10px ;
+  background-color: black;
+  border-radius: 3px;
+  color: 'white';
+  outline: none
+}
+#done-btn{
+  color: white;
+}
+
+#title{
+  background-color: white;
+  color: black;
+  border: 0.5px solid black;
+  outline: none;
+  box-shadow: 2px 2px;
+  height: 25px;
+  width: 350px;
+}
+
+#note-title-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: yellow;
+  box-shadow: 2px 2px 2px 0.5 gray;
+  border-radius: 8px;
+  width: 450px;
+  height: 60px;
+  position: relative;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 8px;
+  text-overflow: ellipsis;
+}
+
+
+#note-title{
+  width: 350px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#note-title-container i{
+  position: absolute;
+  right: 5px;
+  font-size: 16px;
+  
+  color: black; 
+  cursor: pointer;
+
+}
+
+#note-title-container i:hover{
+  font-size: 18px;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 5px;
+}
+
+#view-text{
+  font-size: 18px;
+}
+
+#view-div{
+  position:absolute;
+  left: 0;
+  margin-left: 370px;
+  width: 50%;
+  text-align: left;
+  box-shadow: 2px 2px 5px;
+  padding: 15px;
+  word-wrap: wrap;
+}
+
+#view-div-text{
+  word-wrap: break-word;
+  white-space: pre-wrap; 
+  overflow: hidden; 
+  max-width: 100%; 
+  box-sizing: border-box;
+}
+
+#view-div i{
+  color: black; 
+  cursor: 'pointer'; 
+  margin-top: 7px; 
+  font-size: 15px
+}
+
+#view-div i:hover{
+  box-shadow: 2px 5px 3px  gray;
+  border-radius: 2px;
+  transition: 0.25s;
+}
