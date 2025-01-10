@@ -15,23 +15,32 @@ const AddNote = ({ notesList, setNotesList}) => {
   };
 
   const doneHandler = () => {
-    if (noteId) {
-      
-      const updatedNotes = notesList.map((n, index) =>
-        index === parseInt(noteId) ? note : n
-      );
-      setNotesList(updatedNotes);  
-    } 
-    else {
+    
       if(note.title.trim()!==''){
-        setNotesList([...notesList, note]);
+
+        if (noteId) {
+      
+          const updatedNotes = notesList.map((n, index) =>
+            index === parseInt(noteId) ? note : n
+          );
+          setNotesList(updatedNotes);  
+        } 
+        else{
+          setNotesList([...notesList, note]);          
+        }
         navigate('/');
       }
       else{
-        alert("Title cannot be empty");
+        if(note.text.trim()!==''){
+          alert("Title cannot be empty");
+        }
+        else{
+          navigate('/');
+        }
+        
       }
             
-    }
+    
   };
 
   
